@@ -5,7 +5,6 @@
 <body style="background-color:black;">
 >
 
-</body>
 <link rel="shortcut icon" href="https://cdn.discordapp.com/attachments/872627729466535968/900115172285382687/backdrop1_1.png
 " type="image/x-icon" />
       <title>Scratch Tools</title>
@@ -14,14 +13,15 @@
          Scratch Tools: Embed Generators
       </p>
                  <b> <b>
-                  
+                   
+         
      <input type="text" placeholder ="project id or username" id="userinput">
     <br>
     <button type="submit" onclick="myfunc()" id="demo">generate turbowarp</button>
     <button type="submit" onclick="myfunc2()" id="demo">generate scratch</button>
        <button type="submit" onclick="myfunc3()" id="demo">generate forkphorus</button>
       <button type="submit" onclick="myfunc4()" id="demo">generate phosphorus</button>
-            <button type="submit" onclick="myfunc5()" id="demo">generate sulforus</button>
+            <button type="submit" onclick="myfunc5()" id="demo">generate solforus</button>
           
      <! this is the on click MYFUNCTION the myfunction is the function that activates the embed generator !>
                   <p> <p>
@@ -34,13 +34,16 @@
          <iframe src="https://turbowarp.org/451739970/embed" width="499" height="416" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe>
           <p>
          <a 
+                                <p>
+            <textarea id="text-val" rows="4">paste embed code here before pressing download</textarea><br/>
+<input type="button" id="dwn-btn" value="download html file of embed code :)"/>
+         <p>
          <!-- LikeBtn.com BEGIN -->
 <span class="likebtn-wrapper" data-i18n_like=" " data-ef_voting="bounce" data-white_label="true" data-identifier="scratchtools1" data-dislike_enabled="false" data-icon_dislike_show="false" data-popup_disabled="true" data-share_enabled="false" data-loader_show="true"></span>
 <script>(function(d,e,s){if(d.getElementById("likebtn_wjs"))return;a=d.createElement(e);m=d.getElementsByTagName(e)[0];a.async=1;a.id="likebtn_wjs";a.src=s;m.parentNode.insertBefore(a, m)})(document,"script","//w.likebtn.com/js/w/widget.js");</script>
 <!-- LikeBtn.com END -->
 
-         
-         
+
          <p>
          <a style = "font-family:Helvetica;font-size:16px;font-style:none;it;color:#2a6bd4;"href="https://scratch.mit.edu/users/spazestudios"
          >made by spazestudios</a>
@@ -53,7 +56,13 @@
                            <p>
          <a style = "font-family:Helvetica;font-size:16px;font-style:none;it;color:#2a6bd4;"href="https://github.com/spazestudios/Scratch-Tools"
          >source code + if you wanna contribute</a>
-          
+          <p style = "font-family:Helvetica;font-size:16px;font-style:Bold;color:white;">
+          download file (html):
+
+         
+              
+              
+          <p> <p>
     <br>
 
       
@@ -84,7 +93,7 @@
             var input2 = document.getElementById('userinput');
            
            
-            var embed1 = '<iframe src="https://scratch.mit.edu/projects/'
+            var embed1 = '<iframe src="https://scratch.mit.edu/'
             var embed2 = '/embed" width="499" height="416" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe>'
             var embed3 = embed1 + input2.value + embed2
             alert(embed3)
@@ -128,7 +137,13 @@
         <script type="text/javascript">
         
         function myfunc5() {
-            alert("this is currently not an option due to how sulforous makes their embed codes. if you really need a code go to https://sulforus.aau.at/")
+          alert("this is currently not an option due to how sulforous makes their embed codes. if you really need a code go to https://sulforus.aau.at/")
+            
+
+
+ 
+
+            
             
 
                    
@@ -138,6 +153,34 @@
         function changeBackground(color) {
    document.body.style.background = color;
 }
+    </script>
+        <script type="text/javascript">
+        
+        
+function download(filename, text) {
+    var element = document.createElement('a');
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+    element.setAttribute('download', filename);
+
+    element.style.display = 'none';
+    document.body.appendChild(element);
+
+    element.click();
+
+    document.body.removeChild(element);
+}
+
+// Start file download.
+document.getElementById("dwn-btn").addEventListener("click", function(){
+    // Generate download of hello.txt file with some content
+    var text = document.getElementById("text-val").value;
+    var filename = "hello.html";
+    
+    download(filename, text);
+}, false);
+
+          
+         
     </script>
 
       <style>
